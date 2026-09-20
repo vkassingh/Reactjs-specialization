@@ -1,0 +1,53 @@
+1. React kya hai?Library hai UI banane ke liye. Facebook ne banayi.
+Feature: Component based, Virtual DOM se fast hai,
+
+2. JSX - HTML jaisa dikhne wala JSHTML nahi hai, JS hi hai jo HTML jaisa dikhta hai.
+HTML se farak: class nahi className, for nahi htmlFor, har tag close karna padega, andar JS likhne ke liye {} lagta hai.
+
+3. Real DOM: Asli wala, heavy hai, direct change karoge to poora page slow.
+Virtual DOM: React ka halka-phulka copy. Pehle is copy me change karta hai, fir Real DOM se compare karke sirf utna hi badalta hai.
+
+4. Reconciliation / DiffingReact kaise compare karta hai yehi Reconciliation hai.
+Rule simple hai - key dekhega, type dekhega, agar same hai to sirf andar ka data badlega, poora component nahi todega. Isiliye fast hai.
+
+5. Components - Functional vs ClassClass wala: Purana, this.state, render() likhna padta tha. Ab koi use nahi karta.
+Functional wala: Naya, simple function. Hook use kar sakte ho.
+
+6. PropsParent se child ko data bhejne ka tareeka. Immutable hai - matlab child usko change nahi kar sakta, 
+sirf padh sakta hai. Data flow hamesha upar se neeche - One-way.
+
+7. State & Lifting State UpState: Component ki apni memory.
+Lifting: Agar 2 bhaiyo ko same data chahiye to data ko unke Papa me rakh do. Papa se dono ko props me bhej do.
+
+8. Controlled vs Uncontrolled
+Controlled: Input ka data React ke useState me hai. Har letter type hote hi state update. Hum control me hain.
+Uncontrolled: Input ka data DOM me hai, hum useRef se baad me nikalte hain.
+Yaad karne ka tarika: Controlled = Remote hamare haath me, Uncontrolled = TV par jaake button dabana
+
+9. Keys - Aadhaar CardPehle hi bataya tha, list me har item ka unique ID. Index kabhi mat do, bug aayega.
+
+10. Fragments - Extra div se bachaoReact ko ek parent chahiye, par faltu div se UI kharab hota hai. Isliye <> </> use karo.
+
+11. Conditional Rendering
+If-else JSX me direct nahi chalta.
+
+javascript{isLogin ? <Logout /> : <Login />}
+{isAdmin && <AdminPanel />} // Agar isAdmin true hai to hi dikhega
+
+12.  Refs - useRef, createRef, forwardRefuseRef: Functional me use hota hai, re-render nahi karwata.
+createRef: Class component wala, har baar naya ref banata hai - functional me use mat karo.
+forwardRef: Child ka input Parent se control karna ho to. React 19 me forwardRef ki zarurat nahi, direct prop me ref bhej sakte ho.
+
+13.  Portals - Component ka BhootKisi component ko uske parent ke bahar render karna. 
+Jaise Modal, Popup. DOM me woh body ke andar lagega par code me kahin bhi likho
+
+14. Error Boundaries - MistriKoi ek component crash hua to poori app crash nahi honi chahiye.
+Error Boundary usko pakad leta hai. Ye abhi bhi Class se hi banta hai.
+
+15. Strict Mode - Police WalaKoi galat kaam kar rahe ho to development me 2 baar render karke warning deta hai. Production me kuch nahi karta.
+
+16. HOC - Higher Order ComponentEk aisa function jo component lega aur naya powerful component dega.
+
+17.
+
+
